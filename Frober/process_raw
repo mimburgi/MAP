@@ -1,0 +1,20 @@
+Python 2.7 (r27:82525, Jul  4 2010, 09:01:59) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import os
+>>> os.chdir("C:/Users/Mike/Desktop/Possible_Dissert")
+>>> bad_words = ['Practice', '\t\t\t\t\t']
+
+with open('RawDR_Exp3.txt') as oldfile, open('RawDR_Exp3_noprac.txt', 'w') as newfile:
+    for line in oldfile:
+        if not any(bad_word in line for bad_word in bad_words):
+            newfile.write(line)
+            
+>>> 
+import os
+os.chdir("C:/Users/Mike/Desktop/Possible_Dissert")
+bad_words = ['Practice', '\t\t\t\t\t']
+
+with open('RawDR_Exp3.txt') as oldfile, open('RawDR_Exp3_noprac.txt', 'w') as newfile:
+    for line in oldfile:
+        if not any(bad_word in line for bad_word in bad_words):
+            newfile.write(line)
